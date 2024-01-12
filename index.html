@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/screen.css">
+    <link rel="stylesheet" href="style/landscape.css">
+    <title>IMC</title>
+</head>
+<body>
+    <!-- Calculadora IMC -->
+    <main>
+        <div class="calcu">
+            <h1>Calcule seu IMC</h1>
+            <div class="imc">
+                <legend class="alt">Altura</legend>
+                <input type="text" name="altura" id="altura" placeholder="Ex : 1.60 m" step="0.1" maxlength="4">
+                <legend class="pes">Peso</legend>
+                <input type="text" name="peso" id="peso" placeholder="Ex : 60 Kg" step="0" maxlength="3">
+                <div class="buttons">
+                    <button id="calcular">Calcular</button>
+                    <button type="reset" id="limp">Limpar</button>
+                </div>
+            </div>
+            <div id="resultado"></div>
+        </div>
+    </main>
+
+    <header>
+        <h3>Como realizamos essa conta ?</h3>
+        <p class="explica">
+            Divide seu peso, multiplicado pela altura,
+            dessa forma: peso / (altura x altura).  <br>
+            Para exemplificar, um homem com 1.70m e que tem um peso de 70 Kg, irá realizar a conta assim: <br>
+            70/ (1.70 x 1.70) o resultado vai ser 24.2.
+        </p>
+    </header>
+
+
+    <!-- Informação -->
+    <h1 class="info-ad">Classificação de IMC adulto</h1>
+    <section id="info">
+        <div class="info-ad1" id="abaixo"> 
+            <img src="imagens/ abaixo.png" alt="abaixo-do-peso">
+            <h3 class="spti">Abaixo do Peso</h3>
+            <span>Abaixo de 18.4 Kg/ m&#xb2;</span>
+            <p>
+                Você está abaixo do peso.
+                De acordo com a OMS, Organização Mundial de Saúde, o IMC ideal varia entre 18,5 e 24,90. Abaixo disso há um maior risco de infertilidade, irregularidade menstrual, estresse, ansiedade, fadiga e desnutrição. Ou, pode ser um problema de saúde, procure um médico ou um nutricionista.
+            </p>
+        </div>
+
+
+        <div class="info-ad2" id="normal">
+            <img src="imagens/ normal.png" alt="peso-normal">
+            <h3 class="spti">Peso Normal</h3>
+            <span>Entre 18.5 e 24.9 Kg/ m&#xb2;</span>
+            <p class="clasmc">
+                Parabéns, você está no peso ideal.
+                Para continuar assim, é importante manter uma alimentação balanceada e praticar exercicios regulares,
+                importante sempre checar seus exames.
+            </p>
+        </div>
+
+
+        <div class="info-ad1" id="sobrepeso">
+            <img src="imagens/ sobrepeso.png" alt="sobrepeso-ou-pre-obesidade">
+            <h3 class="spti">Sobrepeso ou Pré-Obesidade</h3>
+            <span>Entre 25.0 e 29.9 Kg/ m&#xb2;</span>
+            <p>
+                Atenção!
+                Alguns quilos acima já é o suficuente para algumas pessoas apresentarem doenças relacionadas ao peso, como diabetes e hipertensão. Quem tem sobrepeso deve rever hábitos e contar com apoio de profissionais que possam reverter esse quadro.
+                procure um médico ou um nutricionista.
+            </p>
+        </div>
+        
+        <div class="info-ad2" id="ob1">
+            <img src="imagens/ obeso1.png" alt="obesidade-grau-1">
+            <h3 class="spti">Obesidade grau 1</h3>
+            <span>Entre 30.0 e 34.9 Kg/ m&#xb2;</span>
+            <p class="clasmc">
+                Sinal de Alerta!
+                O excesso de peso é um fator de risco para o desenvolvimento de doenças de risco.
+                Geralmente vem acompanhada de fadiga e dores musculares que levam à limitação de movimentos.
+                Procure um médico ou um nutricionista.
+            </p>
+        </div>
+
+        <div class="info-ad1" id="ob2">
+            <img src="imagens/obeso2.png" alt="obesidade-grau-2">
+            <h3 class="spti">Obesidade grau 2</h3>
+            <span>Entre 35.0 e 39.9 Kg/ m&#xb2;</span>
+            <p>
+                Sinal Vermelho!
+                As chances de desenvolver diabetes do tipo 2 são maiores. Desse modo, essa doença é outra das graves consequências da obesidade, que compromete a qualidade de vida de um indivíduo e pode ter muitas complicações, como problemas de visão e cicatrização.
+                Procure um médico e, um nutricionista.
+            </p>
+        </div>
+
+        <div class="info-ad2" id="ob3">
+            <img src="imagens/ obeso3.png" alt="obesidade-morbida">
+            <h3 class="spti">Obesidade morbida</h3>
+            <span>Acima de 40.0 Kg/ m&#xb2;</span>
+            <p class="clasmc">
+                Sinal Vermelho!
+                Tem aumento de risco e mortalidade geral, em relação aos não obesos, ou seja, vivem menos e por diversas causas. O excesso de peso aumenta o risco de várias doenças, como hipertensão arterial, diabetes, colesterol elevado, sedentarismo e depressão.
+                Procure um médico e, um nutricionista.
+            </p>
+        </div>
+    </section>
+
+   <article>
+        <div class="cont-inf-ad">
+            <h1>IMC Adulto</h1>
+            <p>
+                Para adultos, um IMC entre 20 e 22 indica a quantidade ideal, saudável de gordura corporal, o que está associado com maior tempo de vida e menor incidência de doenças graves. Coincidentemente, essa relação é o que muitas pessoas consideram ser o mais esteticamente atraente. Entretanto, é importante ressaltar que um índice entre 22 e 25 também é considerado um intervalo bastante aceitável, pois está igualmente associado à boa saúde.
+                Em adultos, o padrão internacional para diagnóstico da obesidade é o IMC, mas em crianças e adolescentes, a classificação de sobrepeso e obesidade segundo o IMC é mais arbitrária, não se relacionando com morbidade e mortalidade da forma como se define obesidade em adultos. Já os idosos possuem pontos de cortes de IMC diferenciados devido à alteração da sua composição corporal.
+            </p>
+        </div>
+
+        <div class="not-infant">
+            <h2>Classificação de IMC infantil</h2>
+            <p>As crianças naturalmente começam a vida com um alto índice de gordura corpórea, mas vão ficando mais magras conforme envelhecem. Além    disso, também há diferenças entre a composição corporal de meninos e meninas. Veja os índices na tabela !
+            </p>
+            <a href="tabela.html" target="_blank">Ver Tabela</a>
+        </div>
+
+        <div class="not-idosos1">
+            <h1>Peso ideal muda depois do 60 anos ?</h1>
+            <p>
+                No caso dos idosos (acima de 60 anos) também, temos nesses casos tabelas de referência adequados. Internacionalmente ainda não existe um consenso sobre o padrão de IMC para pessoas com mais de 60 anos. No entanto, o Ministério da Saúde no Brasil, adota e recomenda o padrão de Lipschitz. Ou seja, valores abaixo de 21,9 considera-se abaixo do peso. Assim como, a partir de 27, entende-se que a pessoa tem sobrepeso. O peso adequado para essa idade seria entre 22 e 26,9.
+
+                <ul>
+                    <li>imc menor ou igual a 21,9 abaixo do peso</li>
+                    <li>imc entre 22 a 26,9 peso ideal</li>
+                    <li>imc maior que 27 sobrepeso SINAL DE ALERTA !!</li><br>
+                    <p><strong>Fonte: Lipschitz 1994</strong></p>
+                </ul>
+            </p>
+        </div>
+
+         <div class="notinf">
+            <h1>Gordura no abdômen</h1>
+            <p>
+                <strong>A gordura localizada no abdômen é considerada um importante fator de risco para doenças cardiovasculares, como o infarto e o AVC.</strong>
+                A causa da gordura localizada !
+
+                A gordura localizada é o acúmulo excessivo de tecido adiposo em determinadas áreas do corpo. Ele se acumula porque há um excesso de suprimentos de energia no corpo.
+
+                Alimentos processados com alto teor de sódio e açúcar; Bebidas alcoólicas com grande quantidade de calorias; Massas com grande fonte de carboidrato; Produtos processados com gorduras saturadas.
+
+                Para ajudar a queima de gordura existem alimentos integrais, não industrializados, com baixo teor de açúcar e alto teor de fibras, como vegetais e frutas, favorecem a queima da gordura abdominal. Além deles, os termogênicos naturais como canela, gengibre, pimenta e café aceleram o metabolismo e a temperatura interna do corpo, ajudando na queima de gordura.
+
+                <h2>Alimentos ricos em fibras</h2>
+                <ol class="lista-abd">
+                    <li>Frutas:  Maracujá, Coco cru, Goiaba vermelha, Maçã, Banana etc..</li>
+                    <li>Legumes:  Agrião, Couve, batata-doce, cebolinha, salsa, milho verde etc..</li>
+                    <li>Verduras:  Vagem, Erva-doce, pimentão, Rúcula etc..</li>
+                    <li>Sereais Integrais:  Arroz integral, Aveia de flocos, Flocos de milho, Amêndoa, etc..</li>
+                    <li>Sementes:  Semente de gergelim, Semente de girassol, chia, Linhaça,</li>
+                </ol>
+                </p>
+         </div>
+    </article>
+
+
+    <!-- Rodapé do site -->
+    <footer>
+        <a href="https://github.com/Kevin-cardoso" target="_blank"><img src="imagens/github-75.png" alt="github"></a>
+        <a href="https://www.linkedin.com/in/kevin-cardoso-434a63219/" target="_blank"><img src="imagens/linkedln-75.png" alt="linkedln"></a>
+        <p class="des">
+            &copy; 2023
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
